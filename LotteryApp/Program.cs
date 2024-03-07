@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace LotteryApp
 {
@@ -71,13 +70,21 @@ namespace LotteryApp
         }
 
         // Method to execute the lottery draw
+        // Method to execute the lottery draw
         static void RunLotteryDraw()
         {
+            Console.WriteLine("Running lottery draw... ");
+
+            // Simulate a loading delay
+            System.Threading.Thread.Sleep(4000); // 4 seconds delay (adjust as needed)
+
             int[] drawResult = GenerateRandomNumbers();
             StoreDrawResultInDatabase(drawResult);
             DisplayDrawResult(drawResult);
             AddToDrawHistory(drawResult); // Add the draw result to the drawHistory array
+            Console.WriteLine("Lottery draw completed.");
         }
+
 
         // Method to display the lottery draw history
         static void DisplayDrawHistory()
@@ -160,7 +167,7 @@ namespace LotteryApp
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    Console.WriteLine("Connected to the database successfully");
+                    // Console.WriteLine("Connected to the database successfully");
                     string query = "INSERT INTO DrawResults (DrawDateTime, Number1, Number2, Number3, Number4, Number5) " +
                                    "VALUES (@DrawDateTime, @Number1, @Number2, @Number3, @Number4, @Number5)";
                     SqlCommand command = new SqlCommand(query, connection);
