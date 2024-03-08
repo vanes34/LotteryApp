@@ -76,7 +76,7 @@ namespace LotteryApp
             Console.WriteLine("Running lottery draw... ");
 
             // simulate a loading delay
-            System.Threading.Thread.Sleep(4000); // 4 seconds delay (adjust as needed)
+            System.Threading.Thread.Sleep(4000); // 4 seconds delay 
 
             int[] drawResult = GenerateRandomNumbers();
             StoreDrawResultInDatabase(drawResult);
