@@ -13,7 +13,7 @@
 <br>Update the connectionString variable with your SQL Server connection string.</br>
 <br>Make sure to replace Data Source with your server name if it's different.</br>
 
-## Running the Application locally
+## Running the Application locally  Program.cs
 <br>Enter one of the following commands:</br>
 <br>Run: Executes a lottery draw, stores the result in the database, and displays the result.</br>
 <br>History: Displays the history of lottery draws.</br>
