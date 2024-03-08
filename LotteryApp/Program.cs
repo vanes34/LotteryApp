@@ -10,6 +10,7 @@ namespace LotteryApp
 
         static void Main(string[] args)
         {
+             Console.ForegroundColor = ConsoleColor.Blue;
             // check if the table exists, if not, create a new one
             EnsureTableExists();
 
