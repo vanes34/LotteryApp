@@ -13,7 +13,7 @@ namespace LotteryApp
             // check if the table exists, if not, create a new one
             EnsureTableExists();
 
-            // Infinite loop for user input
+            // infinite loop for user input
             while (true)
             {
                 Console.WriteLine("Enter command (Run/History/Exit):");
@@ -69,13 +69,13 @@ namespace LotteryApp
             }
         }
 
-        // Method to execute the lottery draw
-        // Method to execute the lottery draw
+        
+        // method to execute the lottery draw
         static void RunLotteryDraw()
         {
             Console.WriteLine("Running lottery draw... ");
 
-            // Simulate a loading delay
+            // simulate a loading delay
             System.Threading.Thread.Sleep(4000); // 4 seconds delay (adjust as needed)
 
             int[] drawResult = GenerateRandomNumbers();
@@ -86,7 +86,7 @@ namespace LotteryApp
         }
 
 
-        // Method to display the lottery draw history
+        // method to display the lottery draw history
         static void DisplayDrawHistory()
         {
             Console.WriteLine("Lottery Draw History:");
@@ -96,7 +96,7 @@ namespace LotteryApp
                 return;
             }
 
-            // Display draw history in groups of 5 numbers,when to insert a comma and when to start a new line
+            // display draw history in groups of 5 numbers,when to insert a comma and when to start a new line
             for (int i = 0; i < drawHistory.Length; i++)
             {
                 Console.Write(drawHistory[i]);
@@ -111,14 +111,14 @@ namespace LotteryApp
             }
         }
 
-        // Method to generate random numbers for the lottery draw
+        // method to generate random numbers for the lottery draw
         static int[] GenerateRandomNumbers()
         {
             int[] drawResult = new int[5];
             Random random = new Random();
             int index = 0;
 
-            // Generate random numbers, until we have 5 unique numbers
+            // generate random numbers, until we have 5 unique numbers
             while (index < 5)
             {
                 int number = random.Next(1, 51);
@@ -130,7 +130,7 @@ namespace LotteryApp
             return drawResult;
         }
 
-        // Method to check if a number exists in an array
+        // method to check if a number exists in an array
         static bool ArrayContains(int[] array, int value)
         {
             foreach (int num in array)
